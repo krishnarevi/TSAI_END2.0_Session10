@@ -18,15 +18,15 @@
 
 Please refer to code file without GloVe embeddings [here](https://github.com/krishnarevi/TSAI_END2.0_Session10/blob/main/Frech_to_English_NMT_without_pretrained_embedding.ipynb)
 
-Please refer to code file with GloVe embeddings [here](https://github.com/krishnarevi/TSAI_END2.0_Session10/blob/main/French_English_translation_with_pre_trained_embedding_Seq2Seq.ipynb)
+Please refer to code file with GloVe embeddings [here](https://github.com/krishnarevi/TSAI_END2.0_Session10/blob/main/Frech_to_English_NMT_with_pretrained_embedding%20(2).ipynb)
 
-##### What are Pretrained Word Embeddings?
+#### What are Pretrained Word Embeddings?
 
 *Pretrained Word Embeddings are the embeddings learned in one task that are used for solving another similar task.*
 
 These embeddings are trained on large datasets, saved, and then used for solving other tasks. That’s why pretrained word embeddings are a form of **Transfer Learning. **Transfer learning, as the name suggests, is about transferring the learnings of one task to another. Learnings could be either weights or embeddings. In our case here, learnings are the embeddings. Hence, this concept is known as pretrained word embeddings.
 
-##### Why do we need Pretrained Word Embeddings?
+#### Why do we need Pretrained Word Embeddings?
 
 Pretrained word embeddings capture the semantic and syntactic meaning of a word as they are trained on large datasets. They are capable of boosting the performance of a Natural Language Processing model. 
 
@@ -37,11 +37,11 @@ Learning word embeddings from scratch is a challenging problem due to two primar
 
 We can broadly divide the embeddings into 2 classes: **Word-level and Character-level embeddings**.
 
- ELMo and Flair embeddings are examples of Character-level embeddings. Here, we are going to use a popular word-level pretrained word embedding -Stanford’s GloVe. Gooogle’s Word2Vec is another popular word-level pretrained word embedding
+ ELMo and Flair embeddings are examples of Character-level embeddings. Here, we are going to use a popular word-level pretrained word embedding -Stanford’s GloVe. Google's Word2Vec is another popular word-level pretrained word embedding
 
 Let’s understand the working of  GloVe.
 
-##### Brief Introduction to GloVe: Global Vectors for Word Representation
+#### Brief Introduction to GloVe: Global Vectors for Word Representation
 
 GloVe is an unsupervised learning algorithm for obtaining vector representations for words. Training is performed on aggregated global word-word co-occurrence statistics from a corpus, and the resulting representations showcase interesting linear substructures of the word vector space. Simply put, GloVe allows us to take a corpus of text, and intuitively transform each word in that corpus into a position in a high-dimensional space. This means that similar words will be placed together.
 
@@ -59,7 +59,7 @@ Only in the ratio of probabilities does noise from non-discriminative words like
 
 
 
-##### Comparison Seq2seq language translation model with and without Glove 
+#### Comparison Seq2seq language translation model with and without Glove 
 
 Here we would use Glove Word Embeddings, which has 40,000 words and available in 50,100,200,300 dimensions. We'll be using the "glove.6B.100d" vectors. 6B indicates these vectors were trained on 6 billion tokens and 100d indicates these vectors are 100-dimensional.
 
@@ -70,7 +70,7 @@ Here is an example line from the text file, shortened to the first ten dimension
 
 ![glove_sample](README.assets/glove_sample.PNG)
 
-##### Training logs and Loss
+#### Training logs and Loss
 
 Without glove embedding							With glove embedding
 
@@ -78,17 +78,17 @@ Without glove embedding							With glove embedding
 
 <img src="README.assets/loss_1.PNG" alt="loss_1" style="zoom:80%;" /><img src="README.assets/loss2.PNG" alt="loss2" style="zoom:80%;" />
 
-Sample predictions from model without glove embedding
+#### Sample predictions from model without glove embedding
 
 <img src="README.assets/predictions_1.PNG" alt="predictions_1"  />
 
-Sample predictions from model with glove embedding
+#### Sample predictions from model with glove embedding
 
 <img src="README.assets/predictions2.PNG" alt="predictions2"  />
 
-Visualize attentions for different predictions
+#### Visualize attentions for different predictions
 
-Sample 1
+##### Sample 1
 
 Input : i m really proud of this
 
@@ -98,7 +98,7 @@ Actual output :j en suis vrariment fier
 
 <img src="README.assets/da1a.PNG" alt="da1a" style="zoom:80%;" /><img src="README.assets/da21.PNG" alt="da21" style="zoom:80%;" />
 
-Sample 2
+##### Sample 2
 
 Input : They are out shopping 
 
@@ -106,7 +106,7 @@ Actual output : Ils sont faire les magasins
 
 <img src="README.assets/da1b.PNG" alt="da1b" style="zoom:80%;" /><img src="README.assets/da22.PNG" alt="da22" style="zoom:80%;" />
 
-Sample 3
+##### Sample 3
 
 Input : He is an intelligent boy
 
@@ -116,5 +116,5 @@ Actual output : c est un garcon intelligent
 
 
 
-##### Why performance not improving ??
+#### Why performance not improving ??
 
